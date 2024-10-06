@@ -11,7 +11,7 @@ export const Navbar = () => {
             className="w-[38px] md:w-[58px] h-[35px] md:h-[58px]"
           />
         </div>
-        <div className=" bg-basic-color w-[100px] box p-1 flex flex-row h-[30px] md:h-[45px] rounded-3xl items-center justify-between md:w-[161px]">
+        <div className=" bg-basic-color w-fit box p-1 flex flex-row h-[30px] md:h-[45px] rounded-3xl items-center justify-between md:w-[161px]">
           <div className="md:pl-3 pl-1 burger">
             <FaBars className="font-sold cursor-pointer" />
           </div>

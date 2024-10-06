@@ -31,10 +31,10 @@ const Hero1 = () => {
 const HeroContent = () => {
   return (
     <div className="h-[100%] relative z-50 w-full flex justify-center items-center">
-      <div className="h-full w-full flex-col flex  justify-center items-center gap-[90px]">
+      <div className="h-full w-full flex-col flex  justify-center items-center gap-[70px] md:gap-[90px]">
         {/* images  start*/}
         <div className=" w-full h-[40%] md:h-fit flex justify-center items-center relative">
-          <div className="h-[245px] md:h-[270px] w-[190px] md:w-[200px] bg-white rounded-2xl mr-[50px] overflow-hidden flex flex-col gap-4">
+          <div className="h-[245px] md:h-[270px] w-[180px] md:w-[200px] bg-white rounded-2xl mr-[80px] overflow-hidden flex flex-col gap-4">
             <img
               src={HeroImage1}
               alt=""
@@ -49,13 +49,13 @@ const HeroContent = () => {
             </div>
           </div>
         </div>
-        <div className="md:h-[194px] w-[140px] h-[170px] md:w-[164px] bg-white p-[2px] rounded-lg absolute md:top-[360px] top-[32%] left-[50%] md:left-[730px]">
+        <div className="md:h-[194px] w-[140px] h-[170px] md:w-[164px] bg-white p-[2px] rounded-lg absolute md:top-[360px] top-[34%] left-[52%] md:left-[730px]">
           <img src={HeroImage2} alt="" className="h-full w-full object-cover" />
         </div>
         {/* images  end*/}
         {/* text start */}
-        <div className=" w-[95%] md:w-[50%] flex flex-col items-center justify-center text-center md:gap-3">
-          <h1 className="text-xl md:text-4xl font-bold text-[#737070]">
+        <div className=" w-[100%] md:w-[50%] flex flex-col items-center justify-center text-center md:gap-3">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#737070]">
             <span className="text-black text-nowrap"> Your Moments,</span>{" "}
             <br /> Our Masterpieces in Every Frame.
           </h1>
@@ -64,12 +64,12 @@ const HeroContent = () => {
             clicks, with exclusive deals waiting for you. Get instant
             confirmation and secure your spot hassle free{" "}
           </p>
-          <button className="mt-6 md:mt-4 rounded-3xl flex flex-row items-center gap-3 justify-center  w-[161px] h-[41px] bg-black text-white text-sm">
+          <button className="mt-6 md:mt-4 rounded-3xl flex flex-row items-center gap-3 justify-center w-[145px] md:w-[161px] h-[41px] bg-black text-white text-sm">
             Get started <MdKeyboardArrowRight />
           </button>
         </div>
 
-        <div className="h-[50px] w-[80%] md:w-[530px] absolute bottom-0 hero-icon-section bg-white flex flex-row justify-around">
+        <div className="h-[50px] w-[85%] md:w-[530px] absolute bottom-0 hero-icon-section bg-white flex flex-row justify-around">
           <div className="w-[160px] items-center justify-between gap-3 flex flex-row">
             <img src={FilmIcon} alt="" />
             <p className="text-xs font-semibold">
