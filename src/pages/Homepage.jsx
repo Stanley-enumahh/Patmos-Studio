@@ -71,16 +71,17 @@ const HeroContent = () => {
 
         <div className="h-[50px] w-[85%] md:w-[530px] absolute bottom-0 hero-icon-section bg-white flex flex-row justify-around px-2">
           <div className="w-[160px] items-center justify-between gap-3 flex flex-row">
-            <img src={FilmIcon} alt="" />
-            <p className="text-xs font-semibold">
-              Professionally <span className="font-bold">Developed Film</span>{" "}
+            <img src={FilmIcon} alt="" className="w-[25px] md:w-fit" />
+            <p className="text-xs md:font-semibold">
+              Professionally{" "}
+              <span className="md:font-bold">Developed Film</span>
             </p>
           </div>
           <div className="w-[150px] items-center justify-center gap-2 flex flex-row">
-            <img src={USBIcon} alt="" />
-            <p className="text-xs font-semibold">
+            <img src={USBIcon} alt="" className="w-[25px] md:w-fit" />
+            <p className="text-xs md:font-semibold">
               Optional Photo <br />
-              <span className="font-bold">USB Drive</span>{" "}
+              <span className="md:font-bold">USB Drive</span>
             </p>
           </div>
         </div>
