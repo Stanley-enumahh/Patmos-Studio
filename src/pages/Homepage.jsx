@@ -5,12 +5,18 @@ import HeroImage2 from "../assets/Patmoshero2.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import FilmIcon from "../assets/icons8-short-film-100 1.png";
 import USBIcon from "../assets/icons8-usb-drive-100 1.png";
+import { HIW } from "../components/HowItWorks";
+import TurningLifeSection from "../components/TurningLife";
+import { Services } from "../components/TurningLife";
 
 export default function Homepage() {
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col h-fit">
       <Navbar />
       <Hero1 />
+      <HIW />
+      <TurningLifeSection />
+      <Services />
     </div>
   );
 }
@@ -30,7 +36,7 @@ const Hero1 = () => {
 
 const HeroContent = () => {
   return (
-    <div className="h-full relative z-50 w-full flex justify-center items-center">
+    <div className="h-full relative z-20 w-full flex justify-center items-center">
       <div className="h-full w-full flex-col flex  md:justify-center justify-start items-center gap-[60px] md:gap-[90px]">
         {/* images  start*/}
         <div className=" w-full h-[30%] md:h-fit flex justify-center items-center relative md:mt-0 mt-[150px]">

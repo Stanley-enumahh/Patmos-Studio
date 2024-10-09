@@ -12,3 +12,6 @@
 .heroImage {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+.chat-shadow {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}

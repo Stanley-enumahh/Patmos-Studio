@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa";
 
 export const Navbar = () => {
   return (
-    <div className="w-full bg-transparent h-fit py-6 md:py-4 flex justify-center fixed top-0 left-0">
+    <div className="w-full bg-transparent h-fit py-6 md:py-4 flex justify-center fixed top-0 left-0 backdrop-blur-md z-50">
       <div className="w-[85%] md:w-[80%] flex flex-row justify-between">
         <div>
           <img
