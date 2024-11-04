@@ -1,5 +1,6 @@
 import { Navbar } from "../components/Navbar";
 import BG from "../assets/Premium PSD _ Shadow of tropical leaves on a wall.png";
+import BGmobile from "../assets/heromobile.png";
 import HeroImage1 from "../assets/Patmoshero1.png";
 import HeroImage2 from "../assets/Patmoshero2.png";
 import { MdKeyboardArrowRight } from "react-icons/md";
@@ -8,6 +9,10 @@ import USBIcon from "../assets/icons8-usb-drive-100 1.png";
 import { HIW } from "../components/HowItWorks";
 import TurningLifeSection from "../components/TurningLife";
 import { Services } from "../components/TurningLife";
+import Reviews from "../components/reviews";
+import FAQS from "../components/faqs";
+import Story from "../components/story";
+import Pix from "../components/Pix";
 
 export default function Homepage() {
   return (
@@ -17,17 +22,26 @@ export default function Homepage() {
       <HIW />
       <TurningLifeSection />
       <Services />
+      <Reviews />
+      <FAQS />
+      <Story />
+      <Pix />
     </div>
   );
 }
 
 const Hero1 = () => {
   return (
-    <div className="Hero1 relative h-screen md:h-[1000px] w-full  flex flex-col overflow-hidden justify-end ">
+    <div className=" relative h-screen md:h-[1000px] w-full  flex flex-col overflow-hidden justify-end ">
       <img
         src={BG}
         alt=""
-        className="h-full z-10 w-full object-fill absolute top-0 left-0"
+        className="h-full hidden md:flex z-10 w-full object-fill absolute top-0 left-0"
+      />
+      <img
+        src={BGmobile}
+        alt=""
+        className="h-full md:hidden flex z-10 w-full object-fill absolute top-0 left-0"
       />
       <HeroContent />
     </div>
