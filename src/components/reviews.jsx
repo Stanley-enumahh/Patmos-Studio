@@ -41,7 +41,7 @@ export default function Reviews() {
           <h1 className="text-lg md:text-3xl font-semibold">
             What Our Clients Say
           </h1>
-          <p className="text-xs">
+          <p className="text-xs text-center">
             Read testimonials from our satisfied customers and discover <br />{" "}
             the impact we’ve made together{" "}
           </p>
@@ -49,8 +49,8 @@ export default function Reviews() {
         <div className=" gap-5 block md:hidden">
           <Carousel
             draggable={true}
-            arrows={false}
-            dots={false}
+            arrows={true}
+            dots={true}
             autoplay={false}
             style={contentStyle}
             fade={false}
@@ -79,7 +79,7 @@ function Testimonial({ testimonial }) {
     <div
       className={`${
         testimonial.name === "Jessica Mark" ? "h-[325px]" : "h-[278px]"
-      } bg-[#F9F9F9] p-5 flex flex-col gap-4 justify-center select-none`}
+      } bg-[#F9F9F9] p-5 flex flex-col gap-4 justify-center select-none `}
     >
       <div className="flex flex-row gap-3 items-center">
         <img
@@ -103,8 +103,10 @@ function TestimonialMobile({ testimonial }) {
   return (
     <div
       className={`${
-        testimonial.name === "Jessica Mark" ? "h-[325px]" : "h-[278px] "
-      } bg-[#F9F9F9] p-5 flex flex-col gap-4 justify-center`}
+        testimonial.name === "Jessica Mark"
+          ? "h-[325px] w-[300px]"
+          : "h-[325px] w-[300px]"
+      } bg-[#F9F9F9]  ml-5 p-5 flex flex-col gap-4 justify-center`}
     >
       <div className="flex flex-row gap-3 items-center">
         <img
