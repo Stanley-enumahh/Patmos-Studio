@@ -13,6 +13,7 @@ import Reviews from "../components/reviews";
 import FAQS from "../components/faqs";
 import Story from "../components/story";
 import Pix from "../components/Pix";
+import Footer from "../components/footer";
 
 export default function Homepage() {
   return (
@@ -26,6 +27,7 @@ export default function Homepage() {
       <FAQS />
       <Story />
       <Pix />
+      <Footer />
     </div>
   );
 }

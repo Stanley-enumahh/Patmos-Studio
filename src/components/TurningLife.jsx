@@ -54,11 +54,17 @@ export const Services = () => {
 
 const ServiceDesign = ({ ServiceObj }) => {
   return (
-    <div className="w-[300px] md:w-[350px] h-fit md:h-[290px] p-5 bg gap-6 flex flex-col justify-center items-center hover:border transition-all cursor-pointer duration-200">
-      <img src={ServiceObj.image} alt={ServiceObj.title} />
+    <div className="w-[300px] md:w-[350px] h-fit md:h-[290px] p-7 md:p-5 bg gap-6 flex flex-col justify-center items-center hover:border transition-all cursor-pointer duration-200">
+      <img
+        src={ServiceObj.image}
+        alt={ServiceObj.title}
+        className="md:w-fit w-[35px]"
+      />
       <div className="text-sm flex flex-col gap-2 md:items-start items-center">
         <h1 className="font-bold">{ServiceObj.title}</h1>
-        <p className="md:text-start text-center">{ServiceObj.info}</p>
+        <p className="md:text-start text-center text-xs md:text-sm">
+          {ServiceObj.info}
+        </p>
       </div>
     </div>
   );
