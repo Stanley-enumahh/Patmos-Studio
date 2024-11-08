@@ -106,7 +106,7 @@ function TestimonialMobile({ testimonial }) {
         testimonial.name === "Jessica Mark"
           ? "h-[325px] w-[300px]"
           : "h-[325px] w-[300px]"
-      } bg-[#F9F9F9]  ml-5 p-5 flex flex-col gap-4 justify-center`}
+      } bg-[#F9F9F9]  ml-3 p-5 flex flex-col gap-4 justify-center`}
     >
       <div className="flex flex-row gap-3 items-center">
         <img
