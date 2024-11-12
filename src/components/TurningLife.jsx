@@ -10,9 +10,9 @@ import playIcon from "../assets/Polygon 1 (1).png";
 
 export default function TurningLifeSection() {
   return (
-    <div className="w-full h-fit md:h-screen md:mb-0 mb-8 flex flex-col items-center justify-center md:mt-0 mt-10">
-      <div className="w-[90%] md:w-[80%] h-[70%]  justify-center items-center flex flex-col gap-5 md:gap-8">
-        <h1 className="text-center text-2xl md:text-3xl font-semibold">
+    <div className="w-full h-fit md:h-screen md:mb-0 mb-8 flex flex-col items-center justify-center md:mt-0 mt-[60px]">
+      <div className="w-[90%] md:w-[80%] h-[70%] justify-center items-center flex flex-col gap-5">
+        <h1 className="text-center text-xl md:text-2xl font-semibold">
           Turning Life’s Best <span className="text-[#737070]">Memories</span>{" "}
           <br className="md:flex hidden" /> into{" "}
           <span className="text-[#737070]">Timeless </span>

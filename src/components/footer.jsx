@@ -8,11 +8,11 @@ export default function Footer() {
   return (
     <div className=" flex justify-center items-center h-[574px] md:h-[320px] bg-black text-white">
       <div className="w-[90%] flex flex-col h-[85%] md:h-[80%] justify-between">
-        <div className="w-full flex flex-row justify-between">
-          <img src={Logo} alt="logo" />
+        <div className="w-full flex flex-row justify-between items-center">
+          <img src={Logo} alt="logo" className="md:w-fit w-8" />
           <FaCircleArrowUp
             onClick={handleScrollUp}
-            className="text-white text-2xl cursor-pointer transition-all hover:scale-105 duration-150"
+            className="text-white md:text-2xl cursor-pointer transition-all hover:scale-105 duration-150 text-lg"
           />
         </div>
         <div className="flex flex-col md:flex-row justify-between w-full md:items-center md:h-fit h-[380px] text-xs">

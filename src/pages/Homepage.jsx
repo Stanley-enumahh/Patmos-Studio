@@ -1,4 +1,5 @@
 import { Navbar } from "../components/Navbar";
+import { useState } from "react";
 import BG from "../assets/Premium PSD _ Shadow of tropical leaves on a wall.png";
 import BGmobile from "../assets/heromobile.png";
 import HeroImage1 from "../assets/Patmoshero1.png";
@@ -16,9 +17,46 @@ import Pix from "../components/Pix";
 import Footer from "../components/footer";
 
 export default function Homepage() {
+  const [isOpen, setIsOpen] = useState(false);
+  function handleIsOpen() {
+    setIsOpen((isOpen) => !isOpen);
+  }
   return (
-    <div className="w-full flex flex-col h-fit">
-      <Navbar />
+    <div className="w-full relative flex-col h-fit">
+      <div
+        className={`${
+          isOpen ? "overlay" : ""
+        } w-full h-full z-50 absolute bg-opacity-5 duration-200 transition-all flex justify-end`}
+      >
+        <div
+          className={`${
+            isOpen ? "flex" : "hidden"
+          } mt-[55px]  mr-[30px] w-[156px] flex justify-center duration-200 transition-all items-center h-fit bg-white p-5 fixed`}
+        >
+          <ul className="flex flex-col gap-3 text-center ">
+            <li onClick={handleIsOpen} className="border-b">
+              Portfolio
+            </li>
+            <li onClick={handleIsOpen} className="border-b">
+              Services
+            </li>
+            <li onClick={handleIsOpen} className="border-b">
+              Contact us
+            </li>
+            <li onClick={handleIsOpen} className="border-b">
+              FAQs
+            </li>
+            <li onClick={handleIsOpen} className="border-b">
+              Sign in
+            </li>
+          </ul>
+        </div>
+      </div>
+      <Navbar
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        handleIsOpen={handleIsOpen}
+      />
       <Hero1 />
       <HIW />
       <TurningLifeSection />
