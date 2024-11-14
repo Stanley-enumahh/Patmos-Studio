@@ -1,9 +1,11 @@
+import { GoDotFill } from "react-icons/go";
+
 export const Pricing = () => {
   return (
     <div className="w-full flex justify-center h-fit">
       <div className="w-[80%] md:w-[76%] h-fit flex flex-col gap-8 mt-[40px] mb-[60px]">
         <div className="flex flex-col gap-1 w-full text-center">
-          <h1 className="text-3xl font-semibold">Pricing</h1>
+          <h1 className="text-xl md:text-3xl font-semibold">Pricing</h1>
           <p className="md:text-xs text-sm">
             Get started today, we offer competitive rates with no hidden fees.
           </p>
@@ -30,8 +32,8 @@ function Package({ item }) {
       <div
         className={`bg-[#fff] ${
           item.category
-            ? "bg-[#4b4a4a] text-white  h-[236px]"
-            : "bg-[#F9F9F9]  h-[219px] text-black"
+            ? "bg-[#343434] text-white h-[236px]"
+            : "bg-[#F9F9F9] h-[219px] text-black"
         }  flex flex-col gap-10 w-full p-3 rounded-[10px]`}
       >
         <div className="flex flex-col gap-3">
@@ -56,9 +58,18 @@ function Package({ item }) {
 
       <div className="w-full  p-3">
         <ul className="flex flex-col gap-2">
-          <li className="text-xs md:text-sm">{item.l1}</li>
-          <li className="text-xs md:text-sm">{item.l2}</li>
-          <li className="text-xs md:text-sm">{item.l3}</li>
+          <li className="text-xs items-center md:text-sm flex flex-row gap-2">
+            <GoDotFill />
+            {item.l1}
+          </li>
+          <li className="text-xs items-center md:text-sm flex flex-row gap-2">
+            <GoDotFill />
+            {item.l2}
+          </li>
+          <li className="text-xs items-center md:text-sm flex flex-row gap-2">
+            <GoDotFill />
+            {item.l3}
+          </li>
         </ul>
       </div>
     </div>

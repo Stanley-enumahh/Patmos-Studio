@@ -27,7 +27,7 @@ export default function Homepage() {
   return (
     <div className={`w-full relative flex-col h-fit`}>
       <Tab isOpen={isOpen} handleIsOpen={handleIsOpen} />
-      <Navbar onIsOpen={handleIsOpen} />
+      <Navbar onIsOpen={handleIsOpen} isOpen={isOpen} />
       <Hero1 />
       <HIW />
       <TurningLifeSection />
