@@ -13,7 +13,7 @@ export const Navbar = ({ isOpen, onIsOpen }) => {
           />
         </div>
         <div className=" md:bg-basic-color w-fit box p-1 flex flex-row h-[30px] md:h-[45px] rounded-3xl items-center justify-between md:w-[161px]">
-          <div className=" burger ml-[42px] md:ml-0 rounded-full">
+          <div className=" burger ml-[42px] backdrop-blur-md p-3 rounded-full md:ml-0">
             {isOpen ? (
               <HiMiniXMark
                 onClick={onIsOpen}
