@@ -23,7 +23,7 @@ const data = [
 
 export const HIW = () => {
   return (
-    <div className="mt-5 md:mt-[80px] gap-8 md:gap-14 w-full h-fit md:h-[600px]  flex flex-col justify-center items-center ">
+    <div className="mt-5 md:mt-[80px] gap-8 w-full h-fit mb-[50px]  flex flex-col justify-center items-center ">
       <h1 className="font-bold">HOW IT WORKS</h1>
       <div className="w-[90%] md:w-[80%] h-fit md:h-[90%] flex flex-col md:flex-row justify-between gap-12 items-center">
         {data.map((item, i) => (

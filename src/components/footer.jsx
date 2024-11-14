@@ -1,7 +1,7 @@
 import Logo from "../assets/patmoslogo2.png";
 import { FaCircleArrowUp } from "react-icons/fa6";
 
-export default function Footer() {
+export const Footerr = () => {
   function handleScrollUp() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -28,10 +28,10 @@ export default function Footer() {
             <p>Info@email.com</p>
           </div>
           <p className="text-[#666262]">
-            Copyright {new Date().getFullYear} CE All Rights Reserved
+            &copy; {new Date().getFullYear()} CE All Rights Reserved
           </p>
         </div>
       </div>
     </div>
   );
-}
+};

@@ -10,62 +10,34 @@ import USBIcon from "../assets/icons8-usb-drive-100 1.png";
 import { HIW } from "../components/HowItWorks";
 import TurningLifeSection from "../components/TurningLife";
 import { Services } from "../components/TurningLife";
+import { Pricing } from "../components/pricing";
 import Reviews from "../components/reviews";
 import FAQS from "../components/faqs";
 import Story from "../components/story";
 import Pix from "../components/Pix";
-import Footer from "../components/footer";
+import { Footerr } from "../components/footer";
 
 export default function Homepage() {
   const [isOpen, setIsOpen] = useState(false);
+
   function handleIsOpen() {
-    setIsOpen((isOpen) => !isOpen);
+    setIsOpen(!isOpen);
   }
+
   return (
-    <div className="w-full relative flex-col h-fit">
-      <div
-        className={`${
-          isOpen ? "overlay" : ""
-        } w-full h-full z-50 absolute bg-opacity-5 duration-200 transition-all flex justify-end`}
-      >
-        <div
-          className={`${
-            isOpen ? "flex" : "hidden"
-          } mt-[55px]  mr-[30px] w-[156px] flex justify-center duration-200 transition-all items-center h-fit bg-white p-5 fixed`}
-        >
-          <ul className="flex flex-col gap-3 text-center ">
-            <li onClick={handleIsOpen} className="border-b">
-              Portfolio
-            </li>
-            <li onClick={handleIsOpen} className="border-b">
-              Services
-            </li>
-            <li onClick={handleIsOpen} className="border-b">
-              Contact us
-            </li>
-            <li onClick={handleIsOpen} className="border-b">
-              FAQs
-            </li>
-            <li onClick={handleIsOpen} className="border-b">
-              Sign in
-            </li>
-          </ul>
-        </div>
-      </div>
-      <Navbar
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        handleIsOpen={handleIsOpen}
-      />
+    <div className={`w-full relative flex-col h-fit`}>
+      <Tab isOpen={isOpen} handleIsOpen={handleIsOpen} />
+      <Navbar onIsOpen={handleIsOpen} />
       <Hero1 />
       <HIW />
       <TurningLifeSection />
       <Services />
+      <Pricing />
       <Reviews />
       <FAQS />
       <Story />
       <Pix />
-      <Footer />
+      <Footerr />
     </div>
   );
 }
@@ -91,9 +63,9 @@ const Hero1 = () => {
 const HeroContent = () => {
   return (
     <div className="h-full relative z-20 w-full flex justify-center items-center">
-      <div className="h-full w-full flex-col flex  md:justify-center justify-start items-center gap-[60px] md:gap-[90px]">
+      <div className="h-full w-full flex-col flex justify-start items-center gap-[60px] md:gap-[90px]">
         {/* images  start*/}
-        <div className=" w-full h-[30%] md:h-fit flex justify-center items-center relative md:mt-0 mt-[150px]">
+        <div className=" w-full h-[30%] md:h-fit flex justify-center items-center relative md:mt-[170px] mt-[150px]">
           <div className="h-[160px] md:h-[270px] w-[118px] md:w-[200px] bg-white rounded-2xl mr-[80px] overflow-hidden flex flex-col md:gap-4 gap-3 heroImage">
             <img
               src={HeroImage1}
@@ -109,7 +81,7 @@ const HeroContent = () => {
             </div>
           </div>
         </div>
-        <div className="md:h-[194px] w-[97px] h-[115px] md:w-[164px] bg-white p-[2px] rounded-lg absolute md:top-[360px] top-[35%] left-[49%] md:left-[730px] shadow-xl heroImage">
+        <div className="md:h-[194px] w-[97px] h-[115px] md:w-[164px] bg-white p-[2px] rounded-lg absolute md:top-[315px] top-[35%] left-[49%] md:left-[691px] shadow-xl heroImage">
           <img src={HeroImage2} alt="" className="h-full w-full object-cover" />
         </div>
         {/* images  end*/}
@@ -145,6 +117,40 @@ const HeroContent = () => {
             </p>
           </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const Tab = ({ isOpen, handleIsOpen }) => {
+  return (
+    <div
+      className={`${
+        isOpen ? "overlay flex" : " hidden "
+      } w-full h-full z-50 absolute bg-opacity-5 duration-200 transition-all justify-end md:hidden`}
+    >
+      <div
+        className={`${
+          isOpen ? "flex" : "hidden"
+        } mt-[55px]  mr-[30px] w-[156px] flex justify-center duration-200 transition-all items-center h-fit bg-white p-5 fixed`}
+      >
+        <ul className="flex flex-col gap-3 text-center ">
+          <li onClick={handleIsOpen} className="border-b">
+            Portfolio
+          </li>
+          <li onClick={handleIsOpen} className="border-b">
+            Services
+          </li>
+          <li onClick={handleIsOpen} className="border-b">
+            Contact us
+          </li>
+          <li onClick={handleIsOpen} className="border-b">
+            FAQs
+          </li>
+          <li onClick={handleIsOpen} className="border-b">
+            Sign in
+          </li>
+        </ul>
       </div>
     </div>
   );
