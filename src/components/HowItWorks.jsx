@@ -1,14 +1,9 @@
 import { MdKeyboardArrowDown } from "react-icons/md";
-import hiw1 from "../assets/HIW3.png";
-import hiw2 from "../assets/HIW2.png";
-import hiw3 from "../assets/HIW1.png";
+import hiw1 from "../assets/hiw1-desktop.png";
+import hiw2 from "../assets/hiw2-desktop.png";
+import hiw3 from "../assets/hiw-desktop.png";
 
 const data = [
-  {
-    image: hiw1,
-    title: "Basic Client information",
-    info: "Obtaining basic client information during booking on a photography studio's website is essential for personalizing services, confirming appointment details, and ensuring clear communication.",
-  },
   {
     image: hiw2,
     title: "Session/Event Details",
@@ -23,12 +18,15 @@ const data = [
 
 export const HIW = () => {
   return (
-    <div className="mt-5 md:mt-[80px] gap-8 w-full h-fit mb-[50px]  flex flex-col justify-center items-center ">
-      <h1 className="font-bold">HOW IT WORKS</h1>
-      <div className="w-[90%] md:w-[80%] h-fit md:h-[90%] flex flex-col md:flex-row justify-between gap-12 items-center">
-        {data.map((item, i) => (
-          <Design item={item} key={i} />
-        ))}
+    <div className="mt-5 md:mt-[80px] gap-8 md:gap-5 w-full h-fit mb-[70px] flex flex-col justify-center items-center md:h-screen">
+      <h1 className="font-bold text-lg md:text-xl">HOW IT WORKS</h1>
+      <div className="w-[90%] md:w-[60%] h-fit md:h-[90%] flex flex-col md:flex-row justify-center gap-12 md:gap-5 items-center">
+        <Design1 />
+        <div className="flex flex-col h-[90%] gap-12 md:gap-5 justify-center items-center w-[80%] md:w-[50%]">
+          {data.map((item, i) => (
+            <Design item={item} key={i} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -36,15 +34,41 @@ export const HIW = () => {
 
 function Design({ item }) {
   return (
-    <div className="md:w-[320px] w-[260px] md:h-[350px] h-[297px] relative flex justify-center rounded-md overflow-hidden">
+    <div className="md:w-full w-[260px] md:h-[50%] h-[297px] relative flex justify-center rounded-[7px] overflow-hidden">
       <img
         src={item.image}
         alt={item.title}
         className="w-full h-full object-cover"
       />
-      <div className="absolute w-[90%] bottom-14 md:bottom-8 flex flex-col justify-between h-[30%] gap-1 text-white">
-        <h1 className="font-bold ml-2">{item.title}</h1>
-        <p className="backdrop-blur-md text-xs p-2">{item.info}</p>
+      <div
+        className="absolute md:text-center
+       w-[95%] bottom-4 md:bottom-3 flex flex-col h-fit text-white md:backdrop-blur-lg gap-2 md:gap-0"
+      >
+        <h1 className="font-bold md:text-xl ml-2">{item.title}</h1>
+        <p className="backdrop-blur-lg text-xs p-2">{item.info}</p>
+      </div>
+    </div>
+  );
+}
+
+function Design1() {
+  return (
+    <div className="md:w-[48%] w-[260px] md:h-[90%] h-[297px] relative flex justify-center rounded-[7px] overflow-hidden">
+      <img
+        src={hiw1}
+        alt="Basic Client information image"
+        className="w-full h-full object-cover"
+      />
+      <div
+        className="absolute md:text-center
+       w-[95%] bottom-4 md:bottom-3 flex flex-col h-fit text-white md:backdrop-blur-lg"
+      >
+        <h1 className="font-bold ml-2">Basic Client information</h1>
+        <p className="md:bg-transparent backdrop-blur-lg text-xs p-2">
+          Obtaining basic client information during booking on a photography
+          studio's website is essential for personalizing services, confirming
+          appointment details, and ensuring clear communication.
+        </p>
       </div>
     </div>
   );

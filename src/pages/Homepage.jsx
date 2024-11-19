@@ -122,7 +122,7 @@ const HeroContent = () => {
   );
 };
 
-const Tab = ({ isOpen, handleIsOpen }) => {
+export const Tab = ({ isOpen, handleIsOpen }) => {
   return (
     <div
       className={`${
