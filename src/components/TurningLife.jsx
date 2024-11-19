@@ -6,7 +6,7 @@ import video from "../assets/icons8-video-trimming-100 1.png";
 import fashion from "../assets/icons8-fashion-model-100 1.png";
 import print from "../assets/icons8-print-100 (1) 1.png";
 import drone from "../assets/icons8-drone-100 (1) 1.png";
-import playIcon from "../assets/Polygon 1 (1).png";
+import { FaPlay } from "react-icons/fa6";
 
 export default function TurningLifeSection() {
   return (
@@ -26,12 +26,8 @@ export default function TurningLifeSection() {
             className="flex md:hidden object-cover"
           />
           <span className="absolute w-full h-full flex items-center justify-center  top-0 left-0">
-            <span className="p-2 md:p-4 bg-white w-fit rounded-full flex justify-center items-center">
-              <img
-                src={playIcon}
-                alt=""
-                className="w-[10px] md:w-[20px] object-contain"
-              />
+            <span className="p-2 md:p-4 cursor-pointer bg-white w-fit rounded-full flex justify-center items-center">
+              <FaPlay size={20} />
             </span>
           </span>
         </div>

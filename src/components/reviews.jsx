@@ -37,7 +37,7 @@ export default function Reviews() {
   return (
     <div className="flex justify-center md:h-[500px] mt-[40px] mb-[40px]">
       <div className="w-[90%] flex flex-col gap-12">
-        <span className="text-center flex flex-col gap-2">
+        <span className="text-center flex flex-col gap-0 md:gap-2">
           <h1 className="text-lg md:text-3xl font-semibold">
             What Our Clients Say
           </h1>
