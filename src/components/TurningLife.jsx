@@ -62,7 +62,7 @@ export const Services = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false }}
-        className="w-[90%] gap-6 flex flex-col md:flex-row flex-wrap justify-center items-center "
+        className="w-[90%] gap-6 grid grid-cols-1 md:grid-cols-3 md:flex-row flex-wrap justify-items-center "
       >
         {ServicesData.map((service, index) => (
           <motion.li
