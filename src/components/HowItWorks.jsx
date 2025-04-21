@@ -25,7 +25,7 @@ export const HIW = () => {
           {data.map((item, i) => (
             <li
               key={i}
-              className="md:w-full w-[260px] md:h-[50%] h-[297px] relative flex justify-center rounded-[7px] overflow-hidden"
+              className="md:w-full xs:w-[260px] sm:w-[290px] md:h-[50%] h-[297px] relative flex justify-center rounded-[7px] overflow-hidden"
             >
               <img
                 src={item.image}
@@ -47,28 +47,9 @@ export const HIW = () => {
   );
 };
 
-function Design({ item }) {
-  return (
-    <li className="md:w-full w-[260px] md:h-[50%] h-[297px] relative flex justify-center rounded-[7px] overflow-hidden">
-      <img
-        src={item.image}
-        alt={item.title}
-        className="w-full h-full object-cover"
-      />
-      <div
-        className="absolute md:text-center
-       w-[95%] bottom-4 md:bottom-3 flex flex-col h-fit text-white md:backdrop-blur-lg gap-2 md:gap-0"
-      >
-        <h1 className="font-bold md:text-xl ml-2">{item.title}</h1>
-        <p className="backdrop-blur-lg text-xs p-2">{item.info}</p>
-      </div>
-    </li>
-  );
-}
-
 function Design1() {
   return (
-    <div className="md:w-[48%] w-[260px] md:h-[90%] h-[297px] relative flex justify-center rounded-[7px] overflow-hidden">
+    <div className="md:w-[48%] xs:w-[260px] sm:w-[290px] md:h-[90%] h-[297px] relative flex justify-center rounded-[7px] overflow-hidden">
       <img
         src={hiw1}
         alt="Basic Client information image"

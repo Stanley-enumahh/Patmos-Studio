@@ -70,13 +70,13 @@ const HeroContent = () => {
     <div className="h-full relative z-20 w-full flex justify-center items-center">
       <div className="h-full w-full flex-col flex justify-start items-center gap-[60px] md:gap-[90px]">
         {/* images  start*/}
-        <div className=" w-full h-[30%] md:h-fit flex justify-center items-center relative md:mt-[170px] mt-[150px]">
+        <div className="w-full h-[30%] md:h-fit flex justify-center items-center relative md:mt-[170px] mt-[150px]">
           <motion.div
             initial={{ opacity: 0, y: "-100px" }}
             whileInView={{ opacity: 1, y: "0px" }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="h-[200px] md:h-[270px] w-[168px] md:w-[200px] bg-white rounded-2xl mr-[80px] overflow-hidden flex flex-col md:gap-4 gap-3 heroImage"
+            className="xs:h-[190px] sm:h-[200px] md:h-[270px] xs:w-[150px] sm:w-[168px] md:w-[200px] bg-white rounded-2xl mr-[80px] overflow-hidden flex flex-col md:gap-4 gap-3 heroImage"
           >
             <img
               src={HeroImage1}
@@ -150,7 +150,7 @@ export const Tab = ({ isOpen, handleIsOpen }) => {
     <div
       className={`${
         isOpen ? "top-0" : "top-[-100%]"
-      } absolute w-full  flex justify-center duration-200 transition-all items-center pt-12 shadow-sm h-[250px]  bg-white z-50 p-5`}
+      } fixed w-full  flex justify-center duration-200 transition-all items-center pt-12 shadow-sm h-[250px]  bg-white z-50 p-5`}
     >
       <ul className="flex flex-col gap-3 text-center ">
         <li onClick={handleIsOpen}>Portfolio</li>

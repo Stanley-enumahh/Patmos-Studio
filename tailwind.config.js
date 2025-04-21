@@ -11,6 +11,10 @@ export default {
         "basic-color": "#D1D1D1",
         secondaryColor: "#666262",
       },
+      screens: {
+        xs: "320px", // extra small devices
+        sm: "360px",
+      },
     },
   },
   plugins: [],

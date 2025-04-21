@@ -46,7 +46,7 @@ export default function Reviews() {
             the impact we’ve made together{" "}
           </p>
         </span>
-        <div className=" gap-5 block md:hidden">
+        <div className="w-full gap-5 block md:hidden">
           <Carousel
             draggable={true}
             arrows={true}
@@ -101,21 +101,23 @@ function Testimonial({ testimonial }) {
 
 function TestimonialMobile({ testimonial }) {
   return (
-    <div className="bg-[#F9F9F9] min-h-[325px] w-[320px]  ml-4 p-5 flex flex-col gap-4 justify-center">
-      <div className="flex flex-row gap-3 items-center">
-        <img
-          src={testimonial.image}
-          alt=""
-          className="w-[50px] h-[50px] select-none"
-        />
-        <div className="flex flex-col gap-1 text-xs">
-          <h1 className="font-bold select-none">{testimonial.name}</h1>
-          <p className="select-none">{testimonial.job}</p>
+    <div className="h-[325px] w-full md:w-[320px]">
+      <div className="w-full px-6 py-3 flex flex-col gap-4 justify-center h-[325px] bg-[#F9F9F9]">
+        <div className="flex flex-row gap-3 items-center">
+          <img
+            src={testimonial.image}
+            alt=""
+            className="w-[50px] h-[50px] select-none"
+          />
+          <div className="flex flex-col gap-1 text-xs">
+            <h1 className="font-bold select-none">{testimonial.name}</h1>
+            <p className="select-none">{testimonial.job}</p>
+          </div>
         </div>
+        <p className="text-xs text-justify select-none">
+          {testimonial.testimonial}
+        </p>
       </div>
-      <p className="text-xs text-justify select-none">
-        {testimonial.testimonial}
-      </p>
     </div>
   );
 }

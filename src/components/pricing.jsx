@@ -43,7 +43,7 @@ export const Pricing = () => {
 function Package({ name, info, price, l1, l2, l3 }) {
   return (
     <div
-      className="w-[100%] hover:scale-105 transition-all duration-200 md:w-[330px] bg-[#F9F9F9] text-black h-[347px]
+      className="w-[100%] hover:scale-105 transition-all duration-200 xs:w-[280px] sm:w-[300px]  md:w-[320px] bg-[#F9F9F9] text-black h-[347px]
        flex flex-col rounded-[10px] p-4 justify-between"
     >
       <div
@@ -56,10 +56,10 @@ function Package({ name, info, price, l1, l2, l3 }) {
         </div>
         <div className="w-full flex flex-row justify-between items-center">
           <h2 className="text-xl font-semibold">
-            <span className="text-sm ">N </span>
+            <span className="text-xs md:text-sm">N </span>
             {price}
           </h2>
-          <button className="bg-black hover:bg-gray-500 transition-all duration-200 text-white cursor-pointer rounded-[22px] text-xs px-6 py-3">
+          <button className="bg-black hover:bg-gray-500 transition-all duration-200 text-white cursor-pointer rounded-[22px] text-[10px] md:text-xs px-6 py-3 ">
             Get started
           </button>
         </div>
@@ -102,10 +102,10 @@ function StandardPackage() {
         </div>
         <div className="w-full flex flex-row justify-between items-center">
           <h2 className="text-xl font-semibold">
-            <span className="text-sm ">N </span>
+            <span className="text-xs md:text-sm">N </span>
             75,500.99
           </h2>
-          <button className="bg-white hover:bg-gray-700 hover:text-white transition-all duration-200 text-black cursor-pointer rounded-[22px] text-xs px-6 py-3">
+          <button className="bg-white hover:bg-gray-700 hover:text-white transition-all duration-200 text-black cursor-pointer rounded-[22px] text-[10px] md:text-xs px-6 py-3">
             Get started
           </button>
         </div>
