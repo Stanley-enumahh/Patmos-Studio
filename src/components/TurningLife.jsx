@@ -68,7 +68,7 @@ export const Services = () => {
           <motion.li
             variants={itemV}
             key={index}
-            className="w-[300px] md:w-[350px] h-fit md:h-[290px] p-7 md:p-5 gap-6 flex flex-col justify-center items-center hover:border transition-all cursor-pointer duration-200"
+            className="w-[300px]  md:w-[350px] h-fit md:h-[290px] p-7 md:p-5 gap-6 flex flex-col justify-center items-center hover:border transition-all cursor-pointer duration-200"
           >
             <img
               src={service.image}
