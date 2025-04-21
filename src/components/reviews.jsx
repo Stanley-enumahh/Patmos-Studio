@@ -101,8 +101,8 @@ function Testimonial({ testimonial }) {
 
 function TestimonialMobile({ testimonial }) {
   return (
-    <div className="h-[325px] w-full md:w-[320px]">
-      <div className="w-full px-6 py-3 flex flex-col gap-4 justify-center h-[325px] bg-[#F9F9F9]">
+    <div className="min-h-[325px] w-full md:w-[320px]">
+      <div className="w-full px-6 py-5 flex flex-col gap-4 justify-center h-[325px] bg-[#F9F9F9]">
         <div className="flex flex-row gap-3 items-center">
           <img
             src={testimonial.image}

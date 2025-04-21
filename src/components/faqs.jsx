@@ -26,7 +26,7 @@ export default function FAQS() {
       whileInView={{ opacity: 1, x: "0px", scale: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="h-[400px] md:h-[450px] flex flex-col gap-7 md:gap-14 bg-red-300 w-full items-center"
+      className="h-[400px] md:h-[450px] flex flex-col gap-7 md:gap-14 w-full items-center"
     >
       <div className="flex flex-col justify-center items-center gap-2">
         <h1 className="text-xl font-semibold md:text-3xl md:font-bold">FAQs</h1>
