@@ -28,7 +28,7 @@ export const Footerr = () => {
             <p>Info@email.com</p>
           </div>
           <p className="text-[#666262]">
-            &copy; {new Date().getFullYear()} CE All Rights Reserved
+            &copy; stanlee {new Date().getFullYear()} All Rights Reserved
           </p>
         </div>
       </div>

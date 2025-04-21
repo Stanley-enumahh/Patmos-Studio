@@ -7,6 +7,21 @@ import fashion from "../assets/icons8-fashion-model-100 1.png";
 import print from "../assets/icons8-print-100 (1) 1.png";
 import drone from "../assets/icons8-drone-100 (1) 1.png";
 import { FaPlay } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
+const container = {
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemV = {
+  hidden: { opacity: 0, y: "-100px" },
+  show: { opacity: 1, y: "0px" },
+};
 
 export default function TurningLifeSection() {
   return (
@@ -18,9 +33,12 @@ export default function TurningLifeSection() {
           <span className="text-[#737070]">Timeless </span>
           Art
         </h1>
-        <div className="bg-yellow-100 relative">
+        <div className=" relative">
           <img src={Section1} alt="" className="md:flex hidden object-cover" />
-          <img
+          <motion.img
+            initial={{ opacity: 0, y: "80px" }}
+            whileInView={{ opacity: 1, y: "0px" }}
+            transition={{ duration: 1 }}
             src={sectionMobile}
             alt=""
             className="flex md:hidden object-cover"
@@ -38,30 +56,34 @@ export default function TurningLifeSection() {
 
 export const Services = () => {
   return (
-    <div className="w-full h-fit flex items-center justify-center mt-10">
-      <div className="w-[90%] gap-6 flex flex-col md:flex-row flex-wrap justify-center items-center ">
-        {ServicesData.map((service, index) => {
-          return <ServiceDesign key={index} ServiceObj={service} />;
-        })}
-      </div>
-    </div>
-  );
-};
-
-const ServiceDesign = ({ ServiceObj }) => {
-  return (
-    <div className="w-[300px] md:w-[350px] h-fit md:h-[290px] p-7 md:p-5 bg gap-6 flex flex-col justify-center items-center hover:border transition-all cursor-pointer duration-200">
-      <img
-        src={ServiceObj.image}
-        alt={ServiceObj.title}
-        className="md:w-fit w-[35px]"
-      />
-      <div className="text-sm flex flex-col gap-2 md:items-start items-center">
-        <h1 className="font-bold">{ServiceObj.title}</h1>
-        <p className="md:text-start text-center text-xs md:text-sm">
-          {ServiceObj.info}
-        </p>
-      </div>
+    <div className="w-full h-fit flex items-center justify-center mt-[80px]">
+      <motion.ul
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false }}
+        className="w-[90%] gap-6 flex flex-col md:flex-row flex-wrap justify-center items-center "
+      >
+        {ServicesData.map((service, index) => (
+          <motion.li
+            variants={itemV}
+            key={index}
+            className="w-[300px] md:w-[350px] h-fit md:h-[290px] p-7 md:p-5 gap-6 flex flex-col justify-center items-center hover:border transition-all cursor-pointer duration-200"
+          >
+            <img
+              src={service.image}
+              alt={service.title}
+              className="md:w-fit w-[35px]"
+            />
+            <div className="text-sm flex flex-col gap-2 md:items-start items-center">
+              <h1 className="font-bold">{service.title}</h1>
+              <p className="md:text-start text-center text-xs md:text-sm">
+                {service.info}
+              </p>
+            </div>
+          </motion.li>
+        ))}
+      </motion.ul>
     </div>
   );
 };

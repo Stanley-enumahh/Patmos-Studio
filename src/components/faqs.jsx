@@ -1,4 +1,5 @@
 import { IoMdAddCircleOutline } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const Questions = [
   {
@@ -20,7 +21,13 @@ const Questions = [
 
 export default function FAQS() {
   return (
-    <div className="h-[400px] md:h-[450px] flex flex-col gap-7 md:gap-14 w-full items-center">
+    <motion.div
+      initial={{ opacity: 0, x: "80px", scale: 0.2 }}
+      whileInView={{ opacity: 1, x: "0px", scale: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="h-[400px] md:h-[450px] flex flex-col gap-7 md:gap-14 w-full items-center"
+    >
       <div className="flex flex-col justify-center items-center gap-2">
         <h1 className="text-xl font-semibold md:text-3xl md:font-bold">FAQs</h1>
         <p className="text-xs">Common questions you may have</p>
@@ -33,7 +40,7 @@ export default function FAQS() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

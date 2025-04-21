@@ -79,7 +79,7 @@ function Testimonial({ testimonial }) {
     <div
       className={`${
         testimonial.name === "Jessica Mark" ? "h-[325px]" : "h-[278px]"
-      } bg-[#F9F9F9] p-5 flex flex-col gap-4 justify-center select-none `}
+      } bg-[#F9F9F9] p-7 flex flex-col gap-4 justify-center select-none `}
     >
       <div className="flex flex-row gap-3 items-center">
         <img
@@ -92,7 +92,7 @@ function Testimonial({ testimonial }) {
           <p className="select-none">{testimonial.job}</p>
         </div>
       </div>
-      <p className="text-xs text-justify select-none">
+      <p className="text-xs text-justify select-none leading-[20px]">
         {testimonial.testimonial}
       </p>
     </div>
@@ -101,13 +101,7 @@ function Testimonial({ testimonial }) {
 
 function TestimonialMobile({ testimonial }) {
   return (
-    <div
-      className={`${
-        testimonial.name === "Jessica Mark"
-          ? "h-[325px] w-[300px]"
-          : "h-[325px] w-[300px]"
-      } bg-[#F9F9F9]  ml-3 p-5 flex flex-col gap-4 justify-center`}
-    >
+    <div className="bg-[#F9F9F9] min-h-[325px] w-[320px]  ml-4 p-5 flex flex-col gap-4 justify-center">
       <div className="flex flex-row gap-3 items-center">
         <img
           src={testimonial.image}

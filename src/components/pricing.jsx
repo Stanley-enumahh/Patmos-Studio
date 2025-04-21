@@ -1,4 +1,5 @@
 import { GoDotFill } from "react-icons/go";
+import { motion } from "framer-motion";
 
 export const Pricing = () => {
   return (
@@ -10,7 +11,12 @@ export const Pricing = () => {
             Get started today, we offer competitive rates with no hidden fees.
           </p>
         </div>
-        <div className="flex flex-col gap-8 md:gap-0 items-center md:flex-row justify-between md:items-start">
+        <motion.div
+          initial={{ opacity: 0, y: "120px" }}
+          whileInView={{ opacity: 1, y: "0px" }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col gap-8 md:gap-0 items-center md:flex-row justify-between md:items-start"
+        >
           <Package
             name="Basic Package"
             info="Ideal for Quick portrait sessions, headshots or small events."
@@ -28,7 +34,7 @@ export const Pricing = () => {
             l2="15 High resolution edited images"
             l3="Digital download + 1 printed photo (8x10)"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
@@ -37,7 +43,7 @@ export const Pricing = () => {
 function Package({ name, info, price, l1, l2, l3 }) {
   return (
     <div
-      className="w-[100%] md:w-[330px] bg-[#F9F9F9] text-black h-[347px]
+      className="w-[100%] hover:scale-105 transition-all duration-200 md:w-[330px] bg-[#F9F9F9] text-black h-[347px]
        flex flex-col rounded-[10px] p-4 justify-between"
     >
       <div
@@ -53,7 +59,7 @@ function Package({ name, info, price, l1, l2, l3 }) {
             <span className="text-sm ">N </span>
             {price}
           </h2>
-          <button className="bg-black text-white cursor-pointer rounded-[22px] text-xs px-6 py-3">
+          <button className="bg-black hover:bg-gray-500 transition-all duration-200 text-white cursor-pointer rounded-[22px] text-xs px-6 py-3">
             Get started
           </button>
         </div>
@@ -81,7 +87,7 @@ function Package({ name, info, price, l1, l2, l3 }) {
 function StandardPackage() {
   return (
     <div
-      className="w-[100%] bg-black text-white md:w-[330px] h-[392px]
+      className="w-[100%] bg-black hover:scale-105 transition-all duration-200 text-white md:w-[330px] h-[392px]
        flex flex-col rounded-[10px] p-4 justify-between"
     >
       <div
@@ -99,7 +105,7 @@ function StandardPackage() {
             <span className="text-sm ">N </span>
             75,500.99
           </h2>
-          <button className="bg-white text-black cursor-pointer rounded-[22px] text-xs px-6 py-3">
+          <button className="bg-white hover:bg-gray-700 hover:text-white transition-all duration-200 text-black cursor-pointer rounded-[22px] text-xs px-6 py-3">
             Get started
           </button>
         </div>
